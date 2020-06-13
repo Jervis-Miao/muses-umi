@@ -1,8 +1,51 @@
-**/*.md
-**/*.svg
-**/*.ejs
-**/*.html
-package.json
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# project
+**/node_modules
+
+# build
+/dist
+coverage
+
+# IDE files
+.idea/
+*.iml
+.ipr
+.iws
+.vscode
+.history
+
+# umi
 .umi
 .umi-production
-.umi-test
+
+# roadhog-api-doc ignore
+/src/utils/request-temp.js
+_roadhog-api-doc
+
+# temp and sys
+*~
+~*
+*.diff
+*.patch
+*.bak
+.DS_Store
+Thumbs.db
+*.log
+screenshot
+.firebase
+.eslintcache
+npm-debug.log*
+package-lock.json
+*bak
+functions/*
+.temp/**
+
+# other
+.project
+.*proj
+.svn/
+*.swp
+*.swo
+*.pyc
+*.pyo
