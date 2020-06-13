@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "cross-env browser=chrome umi dev",
+    "start": "cross-env browser=chrome PORT=9151 MOCK=none umi dev",
     "build": "umi build",
     "lint": "npm run lint:js && npm run lint:style",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
