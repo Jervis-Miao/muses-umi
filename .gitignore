@@ -9,6 +9,7 @@
 
 # production
 /dist
+coverage
 
 # misc
 .DS_Store
@@ -18,3 +19,43 @@
 /src/.umi-production
 /src/.umi-test
 /.env.local
+
+
+# IDE files
+.idea/
+*.iml
+.ipr
+.iws
+.vscode
+.history
+
+# roadhog-api-doc ignore
+/src/utils/request-temp.js
+_roadhog-api-doc
+
+# temp and sys
+*~
+~*
+*.diff
+*.patch
+*.bak
+.DS_Store
+Thumbs.db
+*.log
+screenshot
+.firebase
+.eslintcache
+npm-debug.log*
+package-lock.json
+*bak
+functions/*
+.temp/**
+
+# other
+.project
+.*proj
+.svn/
+*.swp
+*.swo
+*.pyc
+*.pyo

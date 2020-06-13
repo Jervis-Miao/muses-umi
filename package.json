@@ -1,12 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "start": "cross-env MOCK=none PORT=8000 browser=chrome umi dev",
+    "start": "cross-env browser=chrome umi dev",
     "build": "umi build",
     "lint": "npm run lint:js && npm run lint:style",
-    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
-    "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less"
+    "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style"
   },
   "husky": {
     "hooks": {
@@ -21,21 +21,26 @@
   "dependencies": {
     "@umijs/preset-react": "^1.5.6",
     "@umijs/test": "^3.2.3",
-    "lint-staged": "^10.0.7",
-    "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "umi": "^3.2.3",
     "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "@umijs/fabric": "^2.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.2.0",
+    "husky": "^4.2.5",
+    "stylelint": "^13.6.0"
   },
   "engines": {
     "node": ">=10.0.0"
   },
   "checkFiles": [
     "src/**/*.js*",
-    "src/**/*.ts*",
-    "src/**/*.less",
     "config/**/*.js*",
-    "scripts/**/*.js"
+    "scripts/**/*.js",
+    "src/**/*.ts*",
+    "src/**/*.less"
   ]
 }
